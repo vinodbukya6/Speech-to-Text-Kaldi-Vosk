@@ -39,19 +39,21 @@ For Implementation purpose Tensorflow Speech Recognition Challenge dataset used 
 
 For getting Data ready from scratch see following steps. Example dataset used is wsj data. This example implements STT for mobile applications using Kaldi and Vosk libraries.
 
-Implementation Steps:
+# Implementation Steps:
 
-1. Data Preprocessing: Preparing data for Kaldi needs three files. Each line of file follows a pattern.
+# 1. Data Preprocessing: 
 
-Training and Validation data files
+Preparing data for Kaldi needs three files. Each line of file follows a pattern.
+
+Training and Validation data files: 
     wav.scp: utterance_id path_to_auio
     text: utterance_id transcript
     utt2spk: utterance_id speaker
     
-Test data files
+Test data files: 
     wav.scp and utt2spk 
 
-Prepare language data
+Prepare language data: 
     lexicon.txt: Contain every word in the dataset and its phonemes
     nonsilenece_phones: Every phonemes you have 
     optional_phones: List of optional silence phone
@@ -63,7 +65,7 @@ Prepare language data
                         dog d ao g,
                         
                         
-2. Training
+# 2. Training
 
 1. Save above prepared dataset files in ‘kaldi/egs/wsj/s5/your_ folders/files’. 
 2. Your folders are ‘data’ folder contains train, test, validation, local, lang folders. Your files are ‘path.sh’ and ‘run.sh’
