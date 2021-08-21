@@ -57,10 +57,10 @@ Prepare language data
     optional_phones: List of optional silence phone
     silence_phones: List of silence phone
     Example lexicon.txt: 
-                        bed b eh d
-                        bird b er d
-                        cat k ae t
-                        dog d ao g
+                        bed b eh d,
+                        bird b er d,
+                        cat k ae t,
+                        dog d ao g,
                         
                         
 2. Training
