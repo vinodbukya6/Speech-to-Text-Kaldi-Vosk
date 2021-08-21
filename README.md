@@ -21,27 +21,27 @@ The three parts of Kaldi
 
 For Implementation purpose Tensorflow Speech Recognition Challenge dataset used from Kaggle and followed different sources for training. References are mentioned below. 
 
-# Kaldi Installation Steps:
+# Kaldi Installation Steps
 
 1. git clone https://github.com/kaldi-asr/kaldi.git kaldi --origin upstream
 2. cd kaldi/tools: In tools directory run following two commands one by on extras/check_dependencies.sh and make
 3. cd kaldi/src: In src directory run following commands one by one. We need to compile kaldi with GPU for training DNN Model so run configure with use cuda command(sample given here. Whereis cuda: /usr/local/cuda/)  
 ./configure --use-cuda --cudatk-dir=/usr/local/cuda/, make depend, make
 
-# Training DNN Model(mini librispeech data):
+# Training DNN Model(mini librispeech data)
 
 1. Go to egs/minilibrispeech/s5/ and run following commands
 2. Change cmd.sh file 'queue.pl' to run.pl (If you have no queueing system and want to run on a local machine, you can change all instances) and run ./run.sh
 3. Change num_jobs_initial and num_jobs_final to number of GPUs we have in the train.sh file. (num_jobs_final =1, num_jobs_initial =1 in my case)
 4. If any error check solution on kaldi github repo. Possible errors are ‘out of memory’- solution: https://github.com/kaldi-asr/kaldi/issues/4374
 
-# Kaldi from Scratch:
+# Kaldi from Scratch
 
 For getting Data ready from scratch see following steps. Example dataset used is wsj data. This example implements STT for mobile applications using Kaldi and Vosk libraries.
 
-# Implementation Steps:
+# Implementation Steps
 
-# 1. Data Preprocessing: 
+# 1. Data Preprocessing 
 
 Preparing data for Kaldi needs three files. Each line of file follows a pattern.
 
@@ -74,7 +74,7 @@ Prepare language data:
 5. There are different stages 0 - 4 for different training processes.
 6. After successfully training results are saved in the ‘exp’ folder.
 
-# Next Steps:
+# Next Steps
 
 Inference from Kaldi trained custom-model and make Mobile Compatible using Vosk API from Kaldi trained files
 
